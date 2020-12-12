@@ -23,6 +23,9 @@
         <!-- Enable use of coarse/fine location -->
         <item>privacy/location_accuracy_enabled=true</item>
 
+        <!-- ART heap compaction for cached apps -->
+        <item>activity_manager/use_compaction=true</item>
+
         <!-- Live Captions (Pixel 2017 + OEM) -->
         <item>device_personalization_services/Captions__manifest_url_template=https://storage.googleapis.com/captions/%{NAMESPACE}_%{VERSION}_manifest.json</item>
         <item>device_personalization_services/Captions__model_version_v1=20190613</item>
