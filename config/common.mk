@@ -24,7 +24,7 @@ endif
 
 
 # Plugins
-include packages/apps/Plugins/plugins.mk
+#include packages/apps/Plugins/plugins.mk
 
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 # Disable ADB authentication
@@ -157,15 +157,15 @@ include vendor/radiant/config/version.mk
 
 # Include extra packages
 include vendor/radiant/config/packages.mk
-include packages/overlays/Themes/themes.mk
+#include packages/overlays/Themes/themes.mk
 
 # Include Nezextras
-include vendor/nezextras/nezextras.mk
+#include vendor/nezextras/nezextras.mk
 
 # Inherit GAPPS
-ifeq ($(TARGET_INCLUDE_GAPPS), true)
-include vendor/gapps/config.mk
-endif
+#ifeq ($(TARGET_INCLUDE_GAPPS), true)
+#include vendor/gapps/config.mk
+#endif
 
 # Enable support of one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
