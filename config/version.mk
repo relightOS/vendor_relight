@@ -13,7 +13,7 @@
 # limitations under the License.
 
 ANDROID_VERSION := 12.0
-RADIANTVERSION := 2.0
+RADIANTVERSION := 12.0.0
 
 RADIANT_BUILD_TYPE ?= UNOFFICIAL
 RADIANT_DATE_YEAR := $(shell date -u +%Y)
