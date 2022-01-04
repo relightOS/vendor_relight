@@ -1,11 +1,9 @@
 # Radiant packages
 PRODUCT_PACKAGES += \
-    RadiantSetupWizard \
     Terminal \
     ThemePicker \
     RadiantExtras \
     RadiantExtras \
-    RadiantThemesStub \
     QuickAccessWallet
     
 # Extra tools in Radiant
