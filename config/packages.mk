@@ -2,8 +2,9 @@
 PRODUCT_PACKAGES += \
     Terminal \
     ThemePicker \
+    RadiantWizard \
     QuickAccessWallet
-    
+
 # Extra tools in Radiant
 PRODUCT_PACKAGES += \
     7z \
