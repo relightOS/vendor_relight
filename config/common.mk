@@ -155,8 +155,6 @@ include vendor/radiant/config/version.mk
 # BootAnimation
 -include vendor/radiant/config/bootanimation.mk
 
-# Include extra packages
-include vendor/radiant/config/packages.mk
 #include packages/overlays/Themes/themes.mk
 
 # Include Nezextras
@@ -172,3 +170,4 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
 include vendor/fonts/fonts.mk
+include vendor/radiant/config/packages.mk
