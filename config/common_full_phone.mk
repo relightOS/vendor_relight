@@ -9,3 +9,4 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGE_OVERLAYS += vendor/radiant/overlay/dictionaries
 
 $(call inherit-product, vendor/radiant/config/telephony.mk)
+$(call inherit-product-if-exists, vendor/lawnicons/overlay.mk)
