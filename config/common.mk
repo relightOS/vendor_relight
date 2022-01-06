@@ -111,6 +111,8 @@ ifeq ($(WITH_TWRP),true)
 include vendor/radiant/config/twrp.mk
 endif
 
+
+
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
@@ -168,6 +170,12 @@ include vendor/radiant/config/version.mk
 # Enable support of one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
+
+# Gboard configuration
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.com.google.ime.bs_theme=true \
+    ro.com.google.ime.theme_id=5 \
+    ro.com.google.ime.system_lm_dir=/product/usr/share/ime/google/d3_lms
 
 include vendor/fonts/fonts.mk
 include vendor/radiant/config/packages.mk
