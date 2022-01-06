@@ -157,16 +157,6 @@ include vendor/radiant/config/version.mk
 # BootAnimation
 -include vendor/radiant/config/bootanimation.mk
 
-#include packages/overlays/Themes/themes.mk
-
-# Include Nezextras
-#include vendor/nezextras/nezextras.mk
-
-# Inherit GAPPS
-#ifeq ($(TARGET_INCLUDE_GAPPS), true)
-#include vendor/gapps/config.mk
-#endif
-
 # Enable support of one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
@@ -179,3 +169,5 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 include vendor/fonts/fonts.mk
 include vendor/radiant/config/packages.mk
+include vendor/gms/products/gms.mk
+include vendor/rdntextras/rdntextras.mk
