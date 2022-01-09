@@ -2,6 +2,7 @@
 PRODUCT_PACKAGES += \
     Terminal \
     ThemePicker \
+    RadiantExtras \
     RadiantWizard \
     QuickAccessWallet
 

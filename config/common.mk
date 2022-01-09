@@ -12,7 +12,7 @@ TARGET_INCLUDE_GOOGLE_RECORDER ?= false
 # Priv-app permissions
 PRODUCT_COPY_FILES += \
     vendor/radiant/prebuilt/common/etc/permissions/privapp-permissions-radiant.xml:system/etc/permissions/privapp-permissions-radiant.xml \
-    vendor/radiant/prebuilt/common/etc/permissions/com.maitreya.nezukoextras.xml:system/etc/permissions/com.maitreya.nezukoextras.xml
+    vendor/radiant/prebuilt/common/etc/permissions/com.maitreya.radiantextras.xml:system/etc/permissions/com.maitreya.nezukoextras.xml
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
