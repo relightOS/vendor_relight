@@ -1,0 +1,71 @@
+package {
+    default_applicable_licenses: ["harmony-sans_license"],
+}
+
+license {
+    name: "harmony-sans_license",
+    visibility: [":__subpackages__"],
+    license_text: [
+        "LICENSE.txt",
+    ],
+}
+
+prebuilt_font {
+    name: "HarmonyOS_Sans_Thin.ttf",
+    src: "HarmonyOS_Sans_Thin.ttf",
+}
+
+prebuilt_font {
+    name: "HarmonyOS_Sans_Thin_Italic.ttf",
+    src: "HarmonyOS_Sans_Thin_Italic.ttf",
+}
+
+prebuilt_font {
+    name: "HarmonyOS_Sans_Regular.ttf",
+    src: "HarmonyOS_Sans_Regular.ttf",
+}
+
+prebuilt_font {
+    name: "HarmonyOS_Sans_Regular_Italic.ttf",
+    src: "HarmonyOS_Sans_Regular_Italic.ttf",
+}
+
+prebuilt_font {
+    name: "HarmonyOS_Sans_Medium.ttf",
+    src: "HarmonyOS_Sans_Medium.ttf",
+}
+
+prebuilt_font {
+    name: "HarmonyOS_Sans_Medium_Italic.ttf",
+    src: "HarmonyOS_Sans_Medium_Italic.ttf",
+}
+
+prebuilt_font {
+    name: "HarmonyOS_Sans_Light.ttf",
+    src: "HarmonyOS_Sans_Light.ttf",
+}
+
+prebuilt_font {
+    name: "HarmonyOS_Sans_Light_Italic.ttf",
+    src: "HarmonyOS_Sans_Light_Italic.ttf",
+}
+
+prebuilt_font {
+    name: "HarmonyOS_Sans_Bold.ttf",
+    src: "HarmonyOS_Sans_Bold.ttf",
+}
+
+prebuilt_font {
+    name: "HarmonyOS_Sans_Bold_Italic.ttf",
+    src: "HarmonyOS_Sans_Bold_Italic.ttf",
+}
+
+prebuilt_font {
+    name: "HarmonyOS_Sans_Black.ttf",
+    src: "HarmonyOS_Sans_Black.ttf",
+}
+
+prebuilt_font {
+    name: "HarmonyOS_Sans_Black_Italic.ttf",
+    src: "HarmonyOS_Sans_Black_Italic.ttf",
+}
