@@ -148,15 +148,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/radiant/overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/radiant/overlay/common
 
--include $(WORKSPACE)/build_env/image-auto-bits.mk
--include vendor/radiant/config/partner_gms.mk
-
-# Versioning
-include vendor/radiant/config/version.mk
-
-# BootAnimation
--include vendor/radiant/config/bootanimation.mk
-
 # Enable support of one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
@@ -166,6 +157,16 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.bs_theme=true \
     ro.com.google.ime.theme_id=5 \
     ro.com.google.ime.system_lm_dir=/product/usr/share/ime/google/d3_lms
+
+
+-include $(WORKSPACE)/build_env/image-auto-bits.mk
+-include vendor/radiant/config/partner_gms.mk
+
+# Versioning
+include vendor/radiant/config/version.mk
+
+# BootAnimation
+-include vendor/radiant/config/bootanimation.mk
 
 include vendor/fonts/fonts.mk
 include vendor/radiant/config/packages.mk
