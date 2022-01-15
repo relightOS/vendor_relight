@@ -135,4 +135,8 @@
             2 - Global actions menu
     -->
     <integer name="config_keyChordPowerVolumeUp">1</integer>
+
+    <!-- Suppress System UI ANRs (AOSP bug) -->
+    <string translatable="false" name="config_appsNotReportingCrashes">com.android.systemui</string>
+
 </resources>
