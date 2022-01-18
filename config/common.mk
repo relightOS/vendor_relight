@@ -50,16 +50,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 endif
 
-# Branding
-$(call inherit-product, vendor/lawnicons/overlay.mk)
-include vendor/radiant/config/branding.mk
-include vendor/radiant/config/packages.mk
-include vendor/fonts/fonts.mk
-include vendor/gms/products/gms.mk
-include vendor/rdntextras/rdntextras.mk
-
-# BootAnimation
--include vendor/radiant/config/bootanimation.mk
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
@@ -80,6 +70,16 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Include AOSP audio files
 include vendor/radiant/config/aosp_audio.mk
+
+$(call inherit-product, vendor/lawnicons/overlay.mk)
+include vendor/radiant/config/branding.mk
+include vendor/fonts/fonts.mk
+include vendor/rdntextras/rdntextras.mk
+include vendor/radiant/config/packages.mk
+include vendor/gms/products/gms.mk
+
+# BootAnimation
+-include vendor/radiant/config/bootanimation.mk
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
