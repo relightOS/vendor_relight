@@ -58,6 +58,9 @@ include vendor/fonts/fonts.mk
 include vendor/gms/products/gms.mk
 include vendor/rdntextras/rdntextras.mk
 
+# BootAnimation
+-include vendor/radiant/config/bootanimation.mk
+
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
     vendor/radiant/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.nfc.beam.xml
