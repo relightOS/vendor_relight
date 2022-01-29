@@ -8,7 +8,6 @@ license {
     license_text: [
         "LICENSE.txt",
     ],
-    product_specific: true,
 }
 
 prebuilt_font {
