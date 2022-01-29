@@ -8,64 +8,77 @@ license {
     license_text: [
         "LICENSE.txt",
     ],
+    product_specific: true,
 }
 
 prebuilt_font {
     name: "HarmonyOS_Sans_Thin.ttf",
     src: "HarmonyOS_Sans_Thin.ttf",
+    product_specific: true,
 }
 
 prebuilt_font {
     name: "HarmonyOS_Sans_Thin_Italic.ttf",
     src: "HarmonyOS_Sans_Thin_Italic.ttf",
+    product_specific: true,
 }
 
 prebuilt_font {
     name: "HarmonyOS_Sans_Regular.ttf",
     src: "HarmonyOS_Sans_Regular.ttf",
+    product_specific: true,
 }
 
 prebuilt_font {
     name: "HarmonyOS_Sans_Regular_Italic.ttf",
     src: "HarmonyOS_Sans_Regular_Italic.ttf",
+    product_specific: true,
 }
 
 prebuilt_font {
     name: "HarmonyOS_Sans_Medium.ttf",
     src: "HarmonyOS_Sans_Medium.ttf",
+    product_specific: true,
 }
 
 prebuilt_font {
     name: "HarmonyOS_Sans_Medium_Italic.ttf",
     src: "HarmonyOS_Sans_Medium_Italic.ttf",
+    product_specific: true,
 }
 
 prebuilt_font {
     name: "HarmonyOS_Sans_Light.ttf",
     src: "HarmonyOS_Sans_Light.ttf",
+    product_specific: true,
 }
 
 prebuilt_font {
     name: "HarmonyOS_Sans_Light_Italic.ttf",
     src: "HarmonyOS_Sans_Light_Italic.ttf",
+    product_specific: true,
 }
 
 prebuilt_font {
     name: "HarmonyOS_Sans_Bold.ttf",
     src: "HarmonyOS_Sans_Bold.ttf",
+    product_specific: true,
 }
 
 prebuilt_font {
     name: "HarmonyOS_Sans_Bold_Italic.ttf",
     src: "HarmonyOS_Sans_Bold_Italic.ttf",
+    product_specific: true,
 }
 
 prebuilt_font {
     name: "HarmonyOS_Sans_Black.ttf",
     src: "HarmonyOS_Sans_Black.ttf",
+    product_specific: true,
 }
 
 prebuilt_font {
     name: "HarmonyOS_Sans_Black_Italic.ttf",
     src: "HarmonyOS_Sans_Black_Italic.ttf",
+    product_specific: true,
 }
