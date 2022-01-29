@@ -1,28 +1,6 @@
-# Allow vendor/extra to override any property by setting it first
-$(call inherit-product-if-exists, vendor/extra/product.mk)
-
 PRODUCT_BRAND ?= Radiant
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
-ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.com.google.clientidbase=android-google
-else
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
-endif
-
-ifeq ($(TARGET_BUILD_VARIANT),eng)
-# Disable ADB authentication
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
-else
-# Enable ADB authentication
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
-
-# Disable extra StrictMode features on all non-engineering builds
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
-endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
@@ -48,6 +26,25 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
 endif
+endif
+
+ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.com.google.clientidbase=android-google
+else
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
+endif
+
+ifeq ($(TARGET_BUILD_VARIANT),eng)
+# Disable ADB authentication
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
+else
+# Enable ADB authentication
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
+
+# Disable extra StrictMode features on all non-engineering builds
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
 PRODUCT_COPY_FILES += \
@@ -144,21 +141,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:$(TARGET_COPY_OUT_PRODUCT)/usr/keylayout/Vendor_045e_Product_0719.kl
 
-
 # Enforce privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
-
-# Include AOSP audio files
-include vendor/radiant/config/aosp_audio.mk
-
-include vendor/radiant/config/branding.mk
-include vendor/rdntextras/rdntextras.mk
-include vendor/radiant/config/packages.mk
-include vendor/gms/products/gms.mk
-
-# BootAnimation
--include vendor/radiant/config/bootanimation.mk
 
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
@@ -198,5 +183,11 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/radiant/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/radiant/overlay/common
 
+$(call inherit-product, vendor/radiant/config/aosp_audio.mk)
+$(call inherit-product, vendor/radiant/config/branding.mk)
+$(call inherit-product, vendor/rdntextras/rdntextras.mk)
+$(call inherit-product, vendor/radiant/config/packages.mk)
+$(call inherit-product, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/radiant/config/bootanimation.mk)
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
--include vendor/radiant/config/partner_gms.mk
