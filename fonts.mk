@@ -11,3 +11,5 @@ PRODUCT_PACKAGES := \
     HarmonyOS_Sans_Bold_Italic.ttf \
     HarmonyOS_Sans_Black.ttf \
     HarmonyOS_Sans_Black_Italic.ttf \
+    GInterVF-Italic.ttf \
+    GInterVF-Roman.ttf
