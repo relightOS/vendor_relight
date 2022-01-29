@@ -71,7 +71,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Include AOSP audio files
 include vendor/radiant/config/aosp_audio.mk
 
-$(call inherit-product, vendor/lawnicons/overlay.mk)
 include vendor/radiant/config/branding.mk
 include vendor/fonts/fonts.mk
 include vendor/rdntextras/rdntextras.mk
