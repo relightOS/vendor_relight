@@ -128,6 +128,10 @@ PRODUCT_PACKAGES += \
     FontOnePlusSansOverlay \
     FontOneplusSlateSourceOverlay
 
+# RRO Overlays
+PRODUCT_PACKAGES += \
+    NavigationBarModeGesturalOverlayFS
+
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
     vendor/radiant/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.nfc.beam.xml
