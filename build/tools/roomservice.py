@@ -244,7 +244,7 @@ def fetch_dependencies(repo_path, fallback_branch=None):
 
     if syncable_repos:
         print('Syncing dependencies')
-        os.system('repo sync --force-sync --no-tags --current-branch --no-clone-bundle %s' % ' '.join(syncable_repos))
+        os.system('repo sync -c --force-sync --no-clone-bundle --no-tags -v %s' % ' '.join(syncable_repos))
 
     for deprepo in syncable_repos:
         fetch_dependencies(deprepo)
@@ -303,7 +303,7 @@ def main():
         print('Building in a non-CI environment, will not run roomservice. If you would like to run roomservice please "export IS_CIENV=true".')
         return
 
-    os.system('repo sync --force-sync --no-tags --no-clone-bundle -j$(nproc --all)')
+    os.system('repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags -v')
 
     githubreq = urllib.request.Request(
         "https://api.github.com/search/repositories?"
@@ -339,7 +339,7 @@ def main():
         add_to_manifest(adding, fallback_branch)
 
         print("Syncing repository to retrieve project.")
-        os.system('repo sync --force-sync --no-tags --current-branch --no-clone-bundle %s' % repo_path)
+        os.system('repo sync -c --force-sync --no-clone-bundle --no-tags -v %s' % repo_path)
         print("Repository synced!")
 
         fetch_dependencies(repo_path, fallback_branch)
