@@ -126,7 +126,8 @@ PRODUCT_PACKAGES += \
     FontManropeOverlay \
     FontNotoSerifSource \
     FontOnePlusSansOverlay \
-    FontOneplusSlateSourceOverlay
+    FontOneplusSlateSourceOverlay \
+    FontRobotoOverlay
 
 # RRO Overlays
 PRODUCT_PACKAGES += \
