@@ -16,7 +16,7 @@
 # limitations under the License.
 
 # Versioning System
-RADIANT_NUM_VER := 12.0.1
+RADIANT_NUM_VER := 12.0.2
 
 TARGET_PRODUCT_SHORT := $(subst radiant_,,$(RADIANT_BUILD_TYPE))
 
