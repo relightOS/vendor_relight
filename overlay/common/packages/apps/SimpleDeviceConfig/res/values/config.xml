@@ -20,7 +20,5 @@
             System
         -->
 
-        <!-- Use new privacy indicators for location -->
-        <item>privacy/location_indicators_enabled=true</item>
     </string-array>
 </resources>
