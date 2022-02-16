@@ -2,6 +2,7 @@
 PRODUCT_PACKAGES += \
     Updater \
     RadiantWizard \
+    SimpleDeviceConfig \
     Terminal \
     ThemePicker
 
