@@ -184,6 +184,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
+# Change default sounds
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.ringtone=The_big_adventure.ogg \
+    ro.config.notification_sound=Popcorn.ogg \
+    ro.config.alarm_alert=Bright_morning.ogg
+
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/radiant/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/radiant/overlay/common
 
