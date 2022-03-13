@@ -43,3 +43,9 @@ PRODUCT_PACKAGES += \
 # rsync
 PRODUCT_PACKAGES += \
     rsync
+
+# Relight extra apps
+ifeq ($(PRELOAD_EXTRAS),true)
+PRODUCT_PACKAGES += \
+    GugalSearch
+endif
