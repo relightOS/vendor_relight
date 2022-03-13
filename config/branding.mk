@@ -2,6 +2,7 @@
 # Copyright (C) 2020 Fluid
 # Copyright (C) 2021 OCTAVIOS
 # Copyright (C) 2022 Project Radiant
+# Copyright (C) 2022 Relight
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,6 +29,6 @@ BUILD_DATE := $(shell date -u +%Y%m%d)
 BUILD_TIME := $(shell date -u +%H%M)
 RADIANT_BUILD_VERSION := $(RADIANT_NUM_VER)
 RADIANT_VERSION := $(RADIANT_BUILD_VERSION)-$(RADIANT_BUILD_EXTRAS)$(RADIANT_BUILD_TYPE)-$(RADIANT_BUILD)-$(BUILD_DATE)-gapps
-ROM_FINGERPRINT := ProjectRadiant/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(BUILD_TIME)
+ROM_FINGERPRINT := Relight/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(BUILD_TIME)
 RADIANT_DISPLAY_VERSION := $(RADIANT_VERSION)
 RELEASE_TYPE := $(RADIANT_BUILD_TYPE)
