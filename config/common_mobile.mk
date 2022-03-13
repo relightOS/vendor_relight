@@ -1,5 +1,5 @@
 # Inherit common mobile Lineage stuff
-$(call inherit-product, vendor/radiant/config/common.mk)
+$(call inherit-product, vendor/relight/config/common.mk)
 
 # Apps
 PRODUCT_PACKAGES += \

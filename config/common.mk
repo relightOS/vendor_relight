@@ -4,18 +4,18 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/radiant/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/radiant/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/radiant/prebuilt/common/bin/50-lineage.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-lineage.sh
+    vendor/relight/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/relight/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/relight/prebuilt/common/bin/50-lineage.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-lineage.sh
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/addon.d/50-lineage.sh
 
 ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
-    vendor/radiant/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
-    vendor/radiant/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
-    vendor/radiant/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
+    vendor/relight/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
+    vendor/relight/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
+    vendor/relight/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/backuptool_ab.sh \
@@ -48,8 +48,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,vendor/radiant/fonts/prebuilt,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
-    vendor/radiant/fonts/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+    $(call find-copy-subdir-files,*,vendor/relight/fonts/prebuilt,$(TARGET_COPY_OUT_PRODUCT)/fonts) \
+    vendor/relight/fonts/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
 
 PRODUCT_PACKAGES := \
     HarmonyOS_Sans_Thin.ttf \
@@ -135,7 +135,7 @@ PRODUCT_PACKAGES += \
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
-    vendor/radiant/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.nfc.beam.xml
+    vendor/relight/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.nfc.beam.xml
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -161,7 +161,7 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 PRODUCT_COPY_FILES += \
-    vendor/radiant/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
+    vendor/relight/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -190,14 +190,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Popcorn.ogg \
     ro.config.alarm_alert=Bright_morning.ogg
 
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/radiant/overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/radiant/overlay/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/relight/overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/relight/overlay/common
 
-$(call inherit-product, vendor/radiant/config/aosp_audio.mk)
-$(call inherit-product, vendor/radiant/config/branding.mk)
+$(call inherit-product, vendor/relight/config/aosp_audio.mk)
+$(call inherit-product, vendor/relight/config/branding.mk)
 $(call inherit-product, vendor/rdntextras/rdntextras.mk)
-$(call inherit-product, vendor/radiant/config/packages.mk)
+$(call inherit-product, vendor/relight/config/packages.mk)
 $(call inherit-product, vendor/gms/products/gms.mk)
-$(call inherit-product, vendor/radiant/config/bootanimation.mk)
+$(call inherit-product, vendor/relight/config/bootanimation.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk

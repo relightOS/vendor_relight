@@ -15,7 +15,7 @@
 $(call inherit-product, build/target/product/aosp_arm.mk)
 $(call inherit-product, build/target/product/gsi_release.mk)
 
-include vendor/radiant/build/target/product/radiant_generic_target.mk
+include vendor/relight/build/target/product/radiant_generic_target.mk
 
 TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_USES_64_BIT_BINDER := true

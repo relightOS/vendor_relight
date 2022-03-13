@@ -14,7 +14,7 @@
 
 $(call inherit-product, build/target/product/sdk_phone_x86_64.mk)
 
-include vendor/radiant/build/target/product/radiant_generic_target.mk
+include vendor/relight/build/target/product/radiant_generic_target.mk
 
 # Enable mainline checking
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed

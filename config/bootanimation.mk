@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #Bootanimation
-LOCAL_PATH := vendor/radiant
+LOCAL_PATH := vendor/relight
 
 ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
 # Why do these exist in 2021 ewwwwwwwwww

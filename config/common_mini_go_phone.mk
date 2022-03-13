@@ -2,4 +2,4 @@
 PRODUCT_TYPE := go
 
 # Inherit mini common Lineage stuff
-$(call inherit-product, vendor/radiant/config/common_mini_phone.mk)
+$(call inherit-product, vendor/relight/config/common_mini_phone.mk)
